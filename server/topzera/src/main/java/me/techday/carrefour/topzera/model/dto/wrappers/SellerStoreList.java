@@ -1,24 +1,18 @@
-package me.techday.carrefour.topzera.domain;
+package me.techday.carrefour.topzera.model.dto.wrappers;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import me.techday.carrefour.topzera.model.dto.SellerStore;
+
+import java.util.List;
 
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Image {
-
-    @JsonProperty("imageId")
+public class SellerStoreList {
     private String id;
-
-    @JsonProperty("imageLabel")
-    private String label;
-
-    @JsonProperty("imageUrl")
-    private String Url;
-
+    private List<SellerStore> sellers;
 }

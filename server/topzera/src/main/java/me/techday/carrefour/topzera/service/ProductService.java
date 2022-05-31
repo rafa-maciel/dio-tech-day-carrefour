@@ -1,6 +1,6 @@
 package me.techday.carrefour.topzera.service;
 
-import me.techday.carrefour.topzera.domain.Product;
+import me.techday.carrefour.topzera.model.dto.Product;
 
 import java.util.List;
 

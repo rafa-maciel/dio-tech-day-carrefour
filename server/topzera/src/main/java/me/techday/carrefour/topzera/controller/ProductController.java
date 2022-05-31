@@ -1,8 +1,8 @@
-package me.techday.carrefour.topzera.controllers;
+package me.techday.carrefour.topzera.controller;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import me.techday.carrefour.topzera.domain.Product;
+import me.techday.carrefour.topzera.model.dto.Product;
 import me.techday.carrefour.topzera.service.ProductService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

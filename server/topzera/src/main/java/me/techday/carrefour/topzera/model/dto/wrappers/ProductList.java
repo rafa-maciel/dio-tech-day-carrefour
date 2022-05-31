@@ -1,9 +1,9 @@
-package me.techday.carrefour.topzera.domain.wrappers;
+package me.techday.carrefour.topzera.model.dto.wrappers;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import me.techday.carrefour.topzera.domain.Product;
+import me.techday.carrefour.topzera.model.dto.Product;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package me.techday.carrefour.topzera.domain;
+package me.techday.carrefour.topzera.model.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;

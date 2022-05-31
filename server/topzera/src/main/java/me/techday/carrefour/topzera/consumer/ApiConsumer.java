@@ -2,8 +2,8 @@ package me.techday.carrefour.topzera.consumer;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import me.techday.carrefour.topzera.domain.Product;
-import me.techday.carrefour.topzera.domain.wrappers.SellerStoreList;
+import me.techday.carrefour.topzera.model.dto.Product;
+import me.techday.carrefour.topzera.model.dto.wrappers.SellerStoreList;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 

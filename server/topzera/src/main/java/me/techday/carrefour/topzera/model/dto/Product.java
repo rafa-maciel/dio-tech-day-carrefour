@@ -1,4 +1,4 @@
-package me.techday.carrefour.topzera.domain;
+package me.techday.carrefour.topzera.model.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -16,6 +16,7 @@ import java.util.List;
 public class Product {
     @JsonProperty("productId")
     private String id;
+    private Long totalLikes;
 
     @JsonProperty("productName")
     private String name;
@@ -37,4 +38,8 @@ public class Product {
     private String description;
 
     private List<Item> items;
+
+    public void setTotalLikes(Long totalLikes) {
+        this.totalLikes = totalLikes;
+    }
 }
