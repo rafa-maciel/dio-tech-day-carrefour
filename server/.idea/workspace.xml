@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22a25d65-a66b-4763-8fa6-c28f80031183" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/topzera-ms/src/main/java/me/techday/carrefour/topzera/ms/model/Like.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/topzera-ms/src/main/java/me/techday/carrefour/topzera/ms/repository/LikeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/topzera-ms/src/main/java/me/techday/carrefour/topzera/ms/service/LikeConsumerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/topzera/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/topzera/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topzera/src/main/java/me/techday/carrefour/topzera/model/Like.java" beforeDir="false" afterPath="$PROJECT_DIR$/topzera/src/main/java/me/techday/carrefour/topzera/model/Like.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topzera/src/main/java/me/techday/carrefour/topzera/repository/LikeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/topzera/src/main/java/me/techday/carrefour/topzera/repository/LikeRepository.java" afterDir="false" />
-    </list>
+    <list default="true" id="22a25d65-a66b-4763-8fa6-c28f80031183" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
