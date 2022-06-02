@@ -1,14 +1,17 @@
 import React, { memo, useState } from "react";
 import { storeUserInfo } from "../../services/storageService";
+import { useDispatch } from "react-redux";
 import UserForm from "./components/UserForm";
 import { ContentContainerStyled, HeaderContainerStyled, InfoStyled, MainContainer, SubtitleStyled, TitleStyled } from "./style";
+import { addUserInfo } from "../../store/actions/userInfoActions";
 
-function UserInfo({ onGetUserInformation }) {
+function UserInfo() {
     const [info, setInfo] = useState({ 'email': null, 'cep': null })
+    const dispatch = useDispatch()
 
-    const addUserInfo = () => {
+    const updateUserInfo = () => {
         storeUserInfo(info)
-        onGetUserInformation()
+        dispatch(addUserInfo(info))
     }
 
     return (
@@ -22,7 +25,7 @@ function UserInfo({ onGetUserInformation }) {
 
             <ContentContainerStyled>
                 <UserForm 
-                    onFormSubmit={addUserInfo} 
+                    onFormSubmit={updateUserInfo} 
                     onValueChange={(name, value) => setInfo({...info, [name]: value})}
                     />
             </ContentContainerStyled>

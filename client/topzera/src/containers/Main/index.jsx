@@ -1,18 +1,27 @@
-import React, { memo, useEffect, useState } from "react";
-import { hasUserInfoStored } from "../../services/storageService";
+import React, { memo, useEffect } from "react";
+import { useSelector } from "react-redux";
+import { hasUserInfoStored, getCEPStored, getEmailStored } from "../../services/storageService";
 import UserInfo from "../UserInfo";
+import { useDispatch } from 'react-redux'
+import { addUserInfo } from "../../store/actions/userInfoActions";
 
 function Main() {
-    const[hasUserInfo, setHasUserInfo] = useState(false)
+    const userInfo = useSelector((state) => state.user.info)
+    const dispatch = useDispatch()
 
-    useEffect(() => {
-        if (hasUserInfoStored()) setHasUserInfo(true)
-    }, [ hasUserInfo ])
+    useEffect(() => { 
+        if (hasUserInfoStored()) {
+            var email = getEmailStored()
+            var cep = getCEPStored()
+
+            dispatch(addUserInfo({ email, cep }))
+        }
+     }, [ dispatch ])
 
     const DisplayContent = () => {
-        if (hasUserInfo) return <h1>Content</h1>
+        if (userInfo.email) return <h1>Content from { userInfo.email }</h1>
 
-        return <UserInfo onGetUserInformation={() => setHasUserInfo(true)}/>
+        return <UserInfo />
     }
 
     return (
