@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface LikeRepository extends MongoRepository<Like, Long> {
+public interface LikeRepository extends MongoRepository<Like, String> {
 
     Long countByProductId(String productId);
     List<Like> findByUserEmail(String userEmail);
