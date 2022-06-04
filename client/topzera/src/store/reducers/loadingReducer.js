@@ -9,7 +9,6 @@ const initialState = {
 const loadingReducer = createReducer(initialState, (builder) => {
     builder
         .addCase(startLoadingAction, (state, action) => {
-            console.log(`loading started with label {action.payload}`)
             state = {
                 onLoad: true,
                 loadTitle: action.payload
@@ -19,7 +18,6 @@ const loadingReducer = createReducer(initialState, (builder) => {
             state.loadTitle = action.payload
         })
         .addCase(stopLoadingAction, (state, action) => {
-            console.log(`loading stoped`)
             state = initialState
         })
 })

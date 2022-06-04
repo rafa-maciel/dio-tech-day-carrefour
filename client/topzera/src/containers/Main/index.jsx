@@ -1,12 +1,13 @@
 import React, { memo } from "react";
+import ProductPanel from "../ProductPanel";
 import UserInfo from "../UserInfo";
 import { useMainContext } from "./contexts";
 
 function Main() {
-    const [ userInfo ] = useMainContext()
+    const [ userInfo, productList ] = useMainContext()
 
     const DisplayContent = () => {
-        if (userInfo.email) return <h1>Content from { userInfo.email }</h1>
+        if (userInfo.email && productList.length) return <ProductPanel/>
         return <UserInfo />
     }
 

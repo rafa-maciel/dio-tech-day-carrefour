@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import { getCEPStored, getEmailStored, hasUserInfoStored } from "../../../services/storageService";
 import { getProductsAndLikes } from "../../../services/userInfoService";
 import { addLikedProductList } from "../../../store/actions/likeActions";
@@ -9,7 +9,7 @@ import { addUserInfo } from "../../../store/actions/userInfoActions";
 
 function useMainContext() {
     const userInfo = useSelector((state) => state.user.info)
-    const productList = useSelector((state) => state.products.productList)
+    const productList = useSelector((state) => state.products.productList, shallowEqual)
     const dispatch = useDispatch()
 
     /**
@@ -46,7 +46,7 @@ function useMainContext() {
         }
     }, [ dispatch, productList, userInfo ])
 
-    return [ userInfo ]
+    return [ userInfo, productList ]
 }
 
 export { useMainContext }

@@ -8,7 +8,7 @@ const initialState = {
 const productReducer = createReducer(initialState, (builder) => {
     builder
         .addCase(addProductList, (state, action) => {
-            state.myProductsLikes = action.payload
+            state.productList = action.payload
         })
 })
 
