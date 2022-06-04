@@ -14,6 +14,7 @@ import java.util.List;
 @RequestMapping("/products")
 @AllArgsConstructor
 @Slf4j
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class ProductController {
 
     private final ProductService service;
@@ -21,7 +22,7 @@ public class ProductController {
     @GetMapping
     public ResponseEntity<Collection<Product>> getAllByCEP(@RequestParam String cep) {
         log.info("Starting search by cep");
-        List<Product> products = service.findAllProductsByCEP(cep);
+        List<Product> products = service.findAllProductsByCEP(cep);;
         log.info("finished search by cep");
         return ResponseEntity.ok(products);
     }
