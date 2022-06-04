@@ -1,8 +1,8 @@
 import React, { memo, useState } from "react";
 import { storeUserInfo } from "../../services/storageService";
-import { useDispatch } from "react-redux";
 import UserForm from "./components/UserForm";
 import { ContentContainerStyled, HeaderContainerStyled, InfoStyled, MainContainer, SubtitleStyled, TitleStyled } from "./style";
+import { useDispatch } from "react-redux";
 import { addUserInfo } from "../../store/actions/userInfoActions";
 
 function UserInfo() {

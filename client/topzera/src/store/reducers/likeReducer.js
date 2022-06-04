@@ -1,5 +1,5 @@
 import { createReducer } from "@reduxjs/toolkit";
-import { addLikedProduct, deleteLikedProduct } from "../actions/likeActions";
+import { addLikedProduct, addLikedProductList, deleteLikedProduct } from "../actions/likeActions";
 
 const initialState = {
     myProductsLikes: []
@@ -12,6 +12,9 @@ const likeReducer = createReducer(initialState, (builder) => {
         })
         .addCase(deleteLikedProduct, (state, action) => {
             state.myProductsLikes = state.myProductsLikes.filter((product) => product.id !== action.payload.id)
+        })
+        .addCase(addLikedProductList, (state, action) => {
+            state.myProductsLikes = action.payload
         })
 })
 
