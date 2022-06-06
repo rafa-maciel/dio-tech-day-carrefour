@@ -4,6 +4,10 @@ import { Link, Button} from '../../../../components'
 import { likeProduct } from "../../../../services/productService";
 import { addLikedProduct } from '../../../../store/actions/likeActions'
 import { incrementLikeToProduct } from "../../../../store/actions/productActions";
+import { ProductButtonsContainer } from "./style";
+
+import ThumbUpIcon from '@mui/icons-material/ThumbUp';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 function ProductButtons({ product }) {
     const { addCartLink, id } = product
@@ -13,22 +17,27 @@ function ProductButtons({ product }) {
     const handleLike = () => {
         console.log("liked a product")
         likeProduct(id, userEmail)
-            .then(resp => {
+            .then(() => {
                 dispatch(addLikedProduct(id))
                 dispatch(incrementLikeToProduct(id))
             })
     }
 
     return (
-        <>
+        <ProductButtonsContainer>
             <Link 
                 target="_blank"
                 rel="noopener"
                 href={ addCartLink }>
-                    <Button size="small">Comprar</Button>
+                    <Button size="large" color="success" variant="contained" startIcon={<AddShoppingCartIcon />}>Comprar</Button>
             </Link>
-            <Button size="small" color="secondary" onClick={handleLike}>Gostei!</Button>
-        </>
+            <Button 
+                variant="contained"
+                size="large" 
+                color="secondary"
+                startIcon={<ThumbUpIcon />}
+                onClick={handleLike}>Gostei!</Button>
+        </ProductButtonsContainer>
     )
 }
 
