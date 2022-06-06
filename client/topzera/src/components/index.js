@@ -4,6 +4,7 @@ import TextField from './TextField'
 import Typography from './Typography'
 import { Card, CardMedia, CardContent, CardActions } from './Card'
 import Link from './Link'
+import Badge from './Badge'
 
 export {
     Button,
@@ -14,5 +15,6 @@ export {
     CardMedia,
     CardContent,
     CardActions,
-    Link
+    Link,
+    Badge
 }

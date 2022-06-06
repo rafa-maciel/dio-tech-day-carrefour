@@ -1,26 +1,26 @@
-import React, {memo} from "react";
+import React, {memo, useEffect, useState} from "react";
 import { CardMedia } from '../../../../components'
 
-function ProductImage({product}) {
+function ProductImage({images}) {
+    const [currentImage, setCurrentImage] = useState(null)
 
-    const imageUrl = () => {
-        if (product === '{}') return null
+    useEffect(() => {
+        if (images != null && currentImage === null) {
+            setCurrentImage(images[0]) 
+        }
+    }, [images, currentImage])
 
-        return product.items[0].images[0].imageUrl
-    }
-
-    const imageLabel = () => {
-        if (product === '{}') return null
-
-        return product.items[0].images[0].imageLabel
+    const ProductImage = () => {
+        if (currentImage) return (
+            <CardMedia 
+                component="img"
+                image={currentImage.url}
+                alt={currentImage.label}/>
+        )
     }
 
     return (
-        <CardMedia
-                component="img"
-                image={imageUrl()}
-                alt={imageLabel()}
-            />
+        <ProductImage />
     )
 }
 

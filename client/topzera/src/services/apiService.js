@@ -1,4 +1,18 @@
+import Axios from 'axios'
+
 const path = 'http://localhost:8080'
+
+const createAxios = () => {
+    let apiSettings = {
+        baseURL: path,
+        headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': true
+        }
+    }
+
+    return Axios.create(apiSettings)
+}
 
 const headers = {
     method: 'get',
@@ -19,7 +33,26 @@ function getProductsListFromCEP(cep) {
         .then((response) => response.json())
 }
 
+function addLikedProduct(productId, email) {
+    const axios = createAxios()
+    var data = { productId, email }
+
+    return axios.post('/likes', data);
+
+    
+    // console.log(JSON.stringify(data))
+
+    // return fetch(url, {
+    //     headers: {
+    //         method: 'post', 
+    //         body: JSON.stringify(data),
+    //         'Content-Type': 'application/json',
+    //     }})
+    //     .then((response) => response.json())
+}
+
 export {
     getLikesByUserEmail,
-    getProductsListFromCEP
+    getProductsListFromCEP,
+    addLikedProduct
 }

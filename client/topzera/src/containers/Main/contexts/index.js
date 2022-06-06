@@ -10,7 +10,9 @@ import { addUserInfo } from "../../../store/actions/userInfoActions";
 function useMainContext() {
     const userInfo = useSelector((state) => state.user.info)
     const productList = useSelector((state) => state.products.productList, shallowEqual)
+    const onLoading = useSelector((state) => state.loading.onLoad)
     const dispatch = useDispatch()
+
 
     /**
      * Effect calld by userInfo
@@ -44,7 +46,7 @@ function useMainContext() {
                     dispatch(stopLoadingAction())
                 })
         }
-    }, [ dispatch, productList, userInfo ])
+    }, [ dispatch, productList, userInfo, onLoading ])
 
     return [ userInfo, productList ]
 }

@@ -9,8 +9,8 @@ function ProductPanel() {
     const ProductItens = () => {
         if (productList.length) {
             return productList.map((product, index) => 
-                <li>
-                    <ProductCard product={product} key={`product-${index}`} />
+                <li key={`product-${index}`} >
+                    <ProductCard product={product}/>
                 </li>
             )
         }

@@ -34,7 +34,7 @@ const getProductsAndLikes = (email, cep) => {
  */
 const addLikedInformationIfUserLikedThisProduct = (product, likes) => {
     likes.forEach(like => {
-        if (like.productID === product.productId)
+        if (like.productID === product.id)
             product = {...product, likedByUser: true } 
     })
 
@@ -57,8 +57,8 @@ const orderProductsByLikes = (products) => {
  * @returns comparation for products by must liked
  */
 const compareProductByItsLike = (productA, productB) => {
-    if (productA.totalLikes < productB.totalLikes) return -1
-    else if (productA.totalLikes > productB.totalLikes) return 1
+    if (productA.totalLikes < productB.totalLikes) return 1
+    else if (productA.totalLikes > productB.totalLikes) return -1
     return 0
 }
 

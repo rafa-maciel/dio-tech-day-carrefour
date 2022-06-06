@@ -1,29 +1,23 @@
-import { Button, Card, CardActions, CardContent, CardMedia, Link, Typography } from "../../../../components";
+import { CardActions, CardContent, } from "../../../../components";
 import React, {memo} from "react";
 import ProductImage from "../ProductImage";
-import { ProductCardStyled } from "../../style";
+import { LikeBadgeStyled, ProductButtonsStyled, ProductCardStyled, ProductInfoStyled } from "../../style";
+
 
 function ProductCard({ product }) {
+    
+    // useEffect(() => console.log(product), [product])
 
     return (
         <ProductCardStyled>
-            <ProductImage product={product} />
+            <LikeBadgeStyled totalLikes={product.totalLikes} />
+            <ProductImage images={product.images} />
+            
             <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                    {product.productName}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                    {product.description.slice(0, 100)}
-                </Typography>
+                <ProductInfoStyled product={product}/>
             </CardContent>
             <CardActions>
-                <Link 
-                    target="_blank"
-                    rel="noopener"
-                    href={product.items[0].sellers[0].addToCartLink}>
-                        Adicionar ao Carrinho
-                </Link>
-                <Button size="small">Learn More</Button>
+                <ProductButtonsStyled product={product} />
             </CardActions>
         </ProductCardStyled>
     )

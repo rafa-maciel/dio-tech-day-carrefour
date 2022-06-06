@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import { Card } from '../../components'
-import ProductList from './components/ProductList'
+import LikeBadge from './components/LikeBadge'
+import ProductInfo from './components/ProductInfo'
+import ProductButtons from './components/ProductButtons'
 
 export const ProductCardStyled = styled(Card)`
     margin-bottom: 5px;
@@ -11,4 +13,25 @@ export const ProductListStyled = styled.ul`
     margin: 0;
     padding: 0;
     list-style: none;
+`
+
+export const LikeBadgeStyled = styled(LikeBadge)`
+    display: flex;
+    justify-content: flex-end;
+    margin: 30px;
+`
+
+export const ProductButtonsStyled = styled(ProductButtons)`
+    display: flex;
+    justify-content: space-between;
+`
+
+export const ProductInfoStyled = styled(ProductInfo)`
+    .title {
+        font-size: 1.4rem;
+    }
+
+    .price {
+        text-align: center;
+    }
 `
