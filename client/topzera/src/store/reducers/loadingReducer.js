@@ -3,22 +3,22 @@ import { startLoadingAction, stopLoadingAction, updateLoadingLabelAction } from 
 
 const initialState = {
     onLoad: false,
-    loadTitle: ''
+    label: ''
 }
 
 const loadingReducer = createReducer(initialState, (builder) => {
     builder
         .addCase(startLoadingAction, (state, action) => {
-            state = {
-                onLoad: true,
-                loadTitle: action.payload
-            }
+            state.onLoad = true
+            state.label = action.payload
+
         })
         .addCase(updateLoadingLabelAction, (state, action) => {
-            state.loadTitle = action.payload
+            state.label = action.payload
         })
         .addCase(stopLoadingAction, (state, action) => {
-            state = initialState
+            state.onLoad = false
+            state.label = ''
         })
 })
 

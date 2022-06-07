@@ -15,7 +15,6 @@ function ProductButtons({ product }) {
     const dispatch = useDispatch()
 
     const handleLike = () => {
-        console.log("liked a product")
         likeProduct(id, userEmail)
             .then(() => {
                 dispatch(addLikedProduct(id))

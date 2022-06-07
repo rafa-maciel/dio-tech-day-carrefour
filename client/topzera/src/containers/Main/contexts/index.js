@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import { getCEPStored, getEmailStored, hasUserInfoStored } from "../../../services/storageService";
 import { getProductsAndLikes } from "../../../services/userInfoService";
@@ -10,35 +10,17 @@ import { addUserInfo } from "../../../store/actions/userInfoActions";
 function useMainContext() {
     const userInfo = useSelector((state) => state.user.info)
     const productList = useSelector((state) => state.products.productList, shallowEqual)
-    const onLoading = useSelector((state) => state.loading.onLoad)
     const dispatch = useDispatch()
-
-
+    
     /**
-     * Effect calld by userInfo
-     * If user info is in local storege but no in the redux store
-     * it is going to add the info to redux store
+     * Find and dipatch to store
+     * a list of product and the user email likes
      */
-    useEffect(() => {
-        if (hasUserInfoStored() && !userInfo.email) {
-            var email = getEmailStored()
-            var cep = getCEPStored()
-            
-            dispatch(addUserInfo({ email, cep }))
-        }
-    }, [ dispatch, userInfo ])
+    const updateProductsAndLikes = useCallback(() => {
+        const { email, cep } = userInfo
 
-    /**
-     * Effect called by userInfo updated
-     * Check if product list is empty and search for products and likes if it is true
-     */
-    useEffect(() => {
-        if (!productList.length && hasUserInfoStored()) {
-            var email = getEmailStored()
-            var cep = getCEPStored()
-
-
-            dispatch(startLoadingAction('Pesquisando as melhores ofertas perto de você'))
+        if (!productList.length && cep) {
+            dispatch(startLoadingAction('Buscando as melhores ofertas proximas a você...'))
             getProductsAndLikes(email, cep)
                 .then(data => {
                     dispatch(addProductList(data.products))
@@ -46,7 +28,29 @@ function useMainContext() {
                     dispatch(stopLoadingAction())
                 })
         }
-    }, [ dispatch, productList, userInfo, onLoading ])
+    }, [ dispatch, productList, userInfo ])
+
+    const updateUserInfo = useCallback(() => {
+        if (hasUserInfoStored() && !userInfo.email) {
+            dispatch(startLoadingAction('Validando seus dados..'))
+            var email = getEmailStored()
+            var cep = getCEPStored()
+            dispatch(addUserInfo({ email, cep }))
+            dispatch(stopLoadingAction())
+        }
+    }, [dispatch, userInfo])
+
+
+    /**
+     * Effect will be called on the first render
+     * If user info is in local storege but not in the redux store
+     * it is going to add the user info, likes and products to redux store
+     */
+    useEffect(() => {
+        updateUserInfo()
+        updateProductsAndLikes()
+    }, [ updateUserInfo, updateProductsAndLikes, dispatch ])
+   
 
     return [ userInfo, productList ]
 }

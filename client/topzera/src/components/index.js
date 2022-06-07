@@ -5,6 +5,7 @@ import Typography from './Typography'
 import { Card, CardMedia, CardContent, CardActions } from './Card'
 import Link from './Link'
 import Badge from './Badge'
+import LinearProgress from './LinearProgress'
 
 export {
     Button,
@@ -16,5 +17,6 @@ export {
     CardContent,
     CardActions,
     Link,
-    Badge
+    Badge,
+    LinearProgress
 }
