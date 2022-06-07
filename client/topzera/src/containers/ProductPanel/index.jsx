@@ -1,7 +1,8 @@
 import React, {memo} from "react";
 import { shallowEqual, useSelector } from "react-redux";
+import MainHeader from "../../components/MainHeader";
 import ProductCard from "./components/ProductCard";
-import { ProductListStyled } from "./style";
+import { PanelSubtitle, ProductListStyled } from "./style";
 
 function ProductPanel() {
     const productList = useSelector((state) => state.products.productList, shallowEqual)
@@ -20,7 +21,9 @@ function ProductPanel() {
 
     return (
         <>
-            <h3>As melhores ofertas perto de você</h3>
+            <MainHeader>
+                <PanelSubtitle variant="p" component="div">As Top ofertas Mais proximas de você!</PanelSubtitle>
+            </MainHeader>
             <ProductListStyled>
                 <ProductItens />
             </ProductListStyled>

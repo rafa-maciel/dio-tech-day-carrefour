@@ -3,6 +3,7 @@ import { Card } from '../../components'
 import LikeBadge from './components/LikeBadge'
 import ProductInfo from './components/ProductInfo'
 import ProductButtons from './components/ProductButtons'
+import { Typography } from '../../components'
 
 export const ProductCardStyled = styled(Card)`
     margin-bottom: 5px;
@@ -34,4 +35,8 @@ export const ProductInfoStyled = styled(ProductInfo)`
     .price {
         text-align: center;
     }
+`
+
+export const PanelSubtitle = styled(Typography)`
+    text-align: center;
 `
