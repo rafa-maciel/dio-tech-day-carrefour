@@ -2,7 +2,7 @@ package me.techday.carrefour.topzera.consumer;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import me.techday.carrefour.topzera.model.dto.Product;
+import me.techday.carrefour.topzera.model.dto.wrappers.Product;
 import me.techday.carrefour.topzera.model.dto.wrappers.SellerStoreList;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -17,7 +17,7 @@ import java.util.List;
 public class ApiConsumer {
     private static final String SELLERS_URL = "checkout/pub/regions?country=BRA&postalCode=%s";
     private static final String PRODUCTS_URL = "catalog_system/pub/products/search?fq=%s";
-    private static final Duration TIMEOUT = Duration.ofSeconds(8);
+    private static final Duration TIMEOUT = Duration.ofSeconds(30);
 
     private final WebClient webClient;
 

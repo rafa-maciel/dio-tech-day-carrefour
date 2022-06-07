@@ -1,4 +1,4 @@
-package me.techday.carrefour.topzera.model.dto;
+package me.techday.carrefour.topzera.model.dto.wrappers;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -16,7 +17,6 @@ import java.util.List;
 public class Product {
     @JsonProperty("productId")
     private String id;
-    private Long totalLikes;
 
     @JsonProperty("productName")
     private String name;
@@ -39,7 +39,27 @@ public class Product {
 
     private List<Item> items;
 
-    public void setTotalLikes(Long totalLikes) {
-        this.totalLikes = totalLikes;
+    public BigDecimal getPrice() {
+        return items.get(0).getSellers().get(0).getCommertialOffer().getPrice();
+    }
+
+    public BigDecimal getLastPrice() {
+        return items.get(0).getSellers().get(0).getCommertialOffer().getListPrice();
+    }
+
+    public Integer getAvailableQuantity() {
+        return items.get(0).getSellers().get(0).getCommertialOffer().getAvailableQuantity();
+    }
+
+    public String getAddCartUrl() {
+        return items.get(0).getSellers().get(0).getAddToCartLink();
+    }
+
+    public Boolean isAvailable() {
+        return items.get(0).getSellers().get(0).getCommertialOffer().getIsAvailable();
+    }
+
+    public List<Image> getImages() {
+        return items.get(0).getImages();
     }
 }

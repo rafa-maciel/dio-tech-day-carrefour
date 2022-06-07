@@ -3,7 +3,7 @@ package me.techday.carrefour.topzera.service.impl;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import me.techday.carrefour.topzera.consumer.ApiConsumer;
-import me.techday.carrefour.topzera.model.dto.Product;
+import me.techday.carrefour.topzera.model.dto.ProductDTO;
 import me.techday.carrefour.topzera.repository.LikeRepository;
 import me.techday.carrefour.topzera.service.ProductService;
 import org.springframework.stereotype.Service;
@@ -20,17 +20,27 @@ public class ProductServiceImpl implements ProductService {
     private final LikeRepository likeRepository;
 
     @Override
-    public List<Product> findAllProductsByCEP(String cep) {
+    public List<ProductDTO> findAllProductsByCEP(String cep) {
         log.info("Starting API consumer and searching by cep");
-        List<Product> products = apiConsumer
-                .findAllByProductsByCEP(cep);
+
+        // Get products from api and convert them to product DTO using static method convertFrom
+        List<ProductDTO> products = apiConsumer
+                .findAllByProductsByCEP(cep)
+                .stream().map(ProductDTO::convertFrom)
+                .collect(Collectors.toList());
 
         return products.stream()
                 .map(this::getProductWithLikes)
                 .collect(Collectors.toList());
     }
 
-    private Product getProductWithLikes(Product product) {
+    /**
+     * Get likes total from product and
+     * add to the totallikes attribute
+     * @param ProductDTO
+     * @return ProductDTO with totalLikes
+     */
+    private ProductDTO getProductWithLikes(ProductDTO product) {
         Long totalLikes = likeRepository.countByProductId(product.getId());
         product.setTotalLikes(totalLikes);
 

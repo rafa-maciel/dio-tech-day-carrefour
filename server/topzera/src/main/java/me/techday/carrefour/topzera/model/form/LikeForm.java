@@ -2,6 +2,7 @@ package me.techday.carrefour.topzera.model.form;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import me.techday.carrefour.topzera.model.Like;
 
 import javax.validation.constraints.Email;
@@ -9,6 +10,7 @@ import javax.validation.constraints.NotBlank;
 import java.time.LocalDateTime;
 
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter
 public class LikeForm {
     @Email(message = "O Email informado não é um email valido")
