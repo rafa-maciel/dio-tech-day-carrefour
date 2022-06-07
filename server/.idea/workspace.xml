@@ -5,39 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22a25d65-a66b-4763-8fa6-c28f80031183" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/topzera/src/main/java/me/techday/carrefour/topzera/model/dto/ImageDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/topzera/src/main/java/me/techday/carrefour/topzera/model/dto/ProductDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/topzera/src/main/java/me/techday/carrefour/topzera/model/dto/wrappers/CommertialOffer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/topzera/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../client/topzera/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/topzera/src/containers/Main/contexts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/topzera/src/containers/Main/contexts/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/topzera/src/containers/Main/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/topzera/src/containers/Main/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/topzera/src/containers/ProductPanel/components/ProductCard/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/topzera/src/containers/ProductPanel/components/ProductCard/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/topzera/src/containers/ProductPanel/components/ProductImage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/topzera/src/containers/ProductPanel/components/ProductImage/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/topzera/src/services/userInfoService.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/topzera/src/services/userInfoService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topzera/src/main/java/me/techday/carrefour/topzera/consumer/ApiConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/topzera/src/main/java/me/techday/carrefour/topzera/consumer/ApiConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topzera/src/main/java/me/techday/carrefour/topzera/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/topzera/src/main/java/me/techday/carrefour/topzera/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topzera/src/main/java/me/techday/carrefour/topzera/model/dto/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/topzera/src/main/java/me/techday/carrefour/topzera/model/dto/wrappers/Image.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topzera/src/main/java/me/techday/carrefour/topzera/model/dto/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/topzera/src/main/java/me/techday/carrefour/topzera/model/dto/wrappers/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topzera/src/main/java/me/techday/carrefour/topzera/model/dto/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/topzera/src/main/java/me/techday/carrefour/topzera/model/dto/wrappers/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topzera/src/main/java/me/techday/carrefour/topzera/model/dto/Seller.java" beforeDir="false" afterPath="$PROJECT_DIR$/topzera/src/main/java/me/techday/carrefour/topzera/model/dto/wrappers/Seller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topzera/src/main/java/me/techday/carrefour/topzera/model/dto/SellerStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/topzera/src/main/java/me/techday/carrefour/topzera/model/dto/wrappers/SellerStore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topzera/src/main/java/me/techday/carrefour/topzera/model/dto/wrappers/ProductList.java" beforeDir="false" afterPath="$PROJECT_DIR$/topzera/src/main/java/me/techday/carrefour/topzera/model/dto/wrappers/ProductList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topzera/src/main/java/me/techday/carrefour/topzera/model/dto/wrappers/SellerStoreList.java" beforeDir="false" afterPath="$PROJECT_DIR$/topzera/src/main/java/me/techday/carrefour/topzera/model/dto/wrappers/SellerStoreList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topzera/src/main/java/me/techday/carrefour/topzera/model/form/LikeForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/topzera/src/main/java/me/techday/carrefour/topzera/model/form/LikeForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topzera/src/main/java/me/techday/carrefour/topzera/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/topzera/src/main/java/me/techday/carrefour/topzera/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topzera/src/main/java/me/techday/carrefour/topzera/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/topzera/src/main/java/me/techday/carrefour/topzera/service/impl/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topzera/target/classes/me/techday/carrefour/topzera/consumer/ApiConsumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/topzera/target/classes/me/techday/carrefour/topzera/consumer/ApiConsumer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topzera/target/classes/me/techday/carrefour/topzera/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/topzera/target/classes/me/techday/carrefour/topzera/controller/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topzera/target/classes/me/techday/carrefour/topzera/model/dto/Image.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/topzera/target/classes/me/techday/carrefour/topzera/model/dto/Item.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/topzera/target/classes/me/techday/carrefour/topzera/model/dto/Product.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/topzera/target/classes/me/techday/carrefour/topzera/model/dto/Seller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/topzera/target/classes/me/techday/carrefour/topzera/model/dto/SellerStore.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/topzera/target/classes/me/techday/carrefour/topzera/model/dto/wrappers/ProductList.class" beforeDir="false" afterPath="$PROJECT_DIR$/topzera/target/classes/me/techday/carrefour/topzera/model/dto/wrappers/ProductList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topzera/target/classes/me/techday/carrefour/topzera/model/dto/wrappers/SellerStoreList.class" beforeDir="false" afterPath="$PROJECT_DIR$/topzera/target/classes/me/techday/carrefour/topzera/model/dto/wrappers/SellerStoreList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topzera/target/classes/me/techday/carrefour/topzera/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/topzera/target/classes/me/techday/carrefour/topzera/service/ProductService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topzera/target/classes/me/techday/carrefour/topzera/service/impl/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/topzera/target/classes/me/techday/carrefour/topzera/service/impl/ProductServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/topzera/src/containers/ProductPanel/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/topzera/src/containers/ProductPanel/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/topzera/src/containers/ProductPanel/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/topzera/src/containers/ProductPanel/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/topzera/src/containers/UserInfo/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/topzera/src/containers/UserInfo/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,8 +92,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TopzeraMsApplication" />
         <item itemvalue="Application.TopzeraApplication" />
+        <item itemvalue="Application.TopzeraMsApplication" />
       </list>
     </recent_temporary>
   </component>
