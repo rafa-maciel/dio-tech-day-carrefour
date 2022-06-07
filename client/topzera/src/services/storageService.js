@@ -7,6 +7,11 @@ const storeUserInfo = (info) => {
     localStorage.setItem(USER_CEP_KEY, cep)
 }
 
+const clearStorage = () => {
+    localStorage.removeItem(USER_EMAIL_KEY)
+    localStorage.removeItem(USER_CEP_KEY)
+}
+
 const getEmailStored = () => {
     return localStorage.getItem(USER_EMAIL_KEY);
 }
@@ -23,5 +28,6 @@ export {
     storeUserInfo,
     getEmailStored,
     getCEPStored,
-    hasUserInfoStored
+    hasUserInfoStored,
+    clearStorage
 }
