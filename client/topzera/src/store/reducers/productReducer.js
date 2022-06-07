@@ -1,4 +1,5 @@
 import { createReducer } from "@reduxjs/toolkit";
+import { orderProductsByLikes } from "../../services/userInfoService";
 import { addProductList, incrementLikeToProduct } from "../actions/productActions";
 
 const initialState = {
@@ -11,12 +12,14 @@ const productReducer = createReducer(initialState, (builder) => {
             state.productList = action.payload
         })
         .addCase(incrementLikeToProduct, (state, action) => {
-            state.productList = state.productList.map((product) => {
+            let list = state.productList.map((product) => {
                 if (product.id === action.payload) {
                     return {...product, totalLikes: ++product.totalLikes}
                 }
                 return product
             })
+
+            state.productList = orderProductsByLikes(list)
         })
 })
 

@@ -63,4 +63,4 @@ const compareProductByItsLike = (productA, productB) => {
 }
 
 
-export { getProductsAndLikes }
+export { getProductsAndLikes, orderProductsByLikes }
