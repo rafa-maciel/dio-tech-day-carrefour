@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22a25d65-a66b-4763-8fa6-c28f80031183" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../client/topzera/src/containers/ProductPanel/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/topzera/src/containers/ProductPanel/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/topzera/src/containers/ProductPanel/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/topzera/src/containers/ProductPanel/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/topzera/src/containers/UserInfo/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/topzera/src/containers/UserInfo/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/topzera/src/containers/ProductPanel/components/ProductButtons/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/topzera/src/containers/ProductPanel/components/ProductButtons/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +31,6 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="mavenHome" value="Use Maven wrapper" />
-        <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -45,16 +43,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/prog/Projects/dio-tech-day-carrefour/server/topzera-ms&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/topzera-ms" />
+  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -92,8 +85,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TopzeraApplication" />
         <item itemvalue="Application.TopzeraMsApplication" />
+        <item itemvalue="Application.TopzeraApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -118,6 +111,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

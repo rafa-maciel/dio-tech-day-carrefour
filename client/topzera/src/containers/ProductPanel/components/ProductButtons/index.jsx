@@ -31,6 +31,7 @@ function ProductButtons({ product }) {
                     <Button size="large" color="success" variant="contained" startIcon={<AddShoppingCartIcon />}>Comprar</Button>
             </Link>
             <Button 
+                disabled={product.likedByUser}
                 variant="contained"
                 size="large" 
                 color="secondary"
