@@ -4,6 +4,7 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+
 ### STS ###
 .apt_generated
 .classpath
@@ -19,6 +20,10 @@ target/
 *.iml
 *.ipr
 server/.idea
+server/.idea/**
+server/topzera/target/**
+server/topzera-ms/target/**
+
 
 ### NetBeans ###
 /nbproject/private/
@@ -32,3 +37,4 @@ build/
 
 ### VS Code ###
 .vscode/
+client/topzera/node_modules
