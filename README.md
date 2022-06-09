@@ -2,7 +2,10 @@
 #### API Rest and React JS front end for the DIO TECH Carrefour project
 
 ## About the Project
+Desktop Version Screenshot
 ![Screenshot of the project desk version!](screenshots/desk-layout.png "desk layout")
+
+Mobile Version Screenshot
 ![Screenshot of the project mobile version!](screenshots/mobile-layout.png "mobile layout")
 
 The TOPZERA Carrefour project use the endpoints from Tech DIO Carrefour challenge to get all products near from the CEP and show them ordering by how much "likes" the product own.
@@ -37,15 +40,18 @@ User will be able to like a product, the product list will be ordered by its lik
 
 
 ## Getting Started
-**Front End**
+__Front End__
+
 Open the client/topzera folder on your prefer IDE and run the command:
 - npm i
 - npm run start
 
-**Back End**
+__Back End__
+
 Open the server/topzera and the server/topzera-ms on your prefer IDE wait for the maven to load all the dependencies, then, run the spring boot application class (TopzeraApplication and TopzeraMsApplication
 
-**Docker**
+__Docker__
+
 open in the command line the path docker/kafka and run the command:
 - docker-compose up -d
 
@@ -57,7 +63,8 @@ open in the command line the path docker/mongo and run the command:
 ### Installation
 1. clone the project
 
-**Front end**
+__Front end__
+
 2. Install node version 16.15.0
 > https://github.com/rafa-maciel/dio-tech-day-carrefour.git
 3. navigate to the path client/topzera and run
@@ -65,14 +72,16 @@ open in the command line the path docker/mongo and run the command:
 4. run the start server
 > npm run start
 
-**Back end**
+__Back end__
+
 5. Install java JDK 11
 6. Open the project folder server/topzera on your idea and wait for the maven to load all dependencies
 7. Run the Boot Application
 8. Open the project folder server/topzera-ms on your idea and wait for the maven to load all dependencies
 9. Run the Boot Application
 
-**Dockker**
+__Dockker__
+
 10. Install the Docker
 11. navigate to the path docker/kafka
 12. run the command
