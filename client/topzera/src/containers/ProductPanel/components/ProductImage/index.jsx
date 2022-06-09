@@ -1,5 +1,5 @@
 import React, {memo, useEffect, useState} from "react";
-import { CardMedia } from '../../../../components'
+import { ProductImageStyled } from "./style";
 
 function ProductImage({images}) {
     const [currentImage, setCurrentImage] = useState(null)
@@ -12,7 +12,7 @@ function ProductImage({images}) {
 
     const ProductImage = () => {
         if (currentImage) return (
-            <CardMedia 
+            <ProductImageStyled 
                 component="img"
                 image={currentImage.url}
                 alt={currentImage.label}/>

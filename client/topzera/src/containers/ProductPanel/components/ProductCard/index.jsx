@@ -1,7 +1,7 @@
-import { CardActions, CardContent, } from "../../../../components";
+import { CardActions } from "../../../../components";
 import React, {memo} from "react";
 import ProductImage from "../ProductImage";
-import { LikeBadgeStyled, ProductButtonsStyled, ProductCardStyled, ProductInfoStyled } from "../../style";
+import { CardContentStyled, LikeBadgeStyled, ProductButtonsStyled, ProductCardStyled, ProductInfoStyled } from "../../style";
 
 
 function ProductCard({ product }) {
@@ -10,12 +10,11 @@ function ProductCard({ product }) {
 
     return (
         <ProductCardStyled>
-            <LikeBadgeStyled totalLikes={product.totalLikes} />
-            <ProductImage images={product.images} />
-            
-            <CardContent>
+            <CardContentStyled>
+                <LikeBadgeStyled totalLikes={product.totalLikes} />
+                <ProductImage images={product.images} />
                 <ProductInfoStyled product={product}/>
-            </CardContent>
+            </CardContentStyled>
             <CardActions>
                 <ProductButtonsStyled product={product} />
             </CardActions>
