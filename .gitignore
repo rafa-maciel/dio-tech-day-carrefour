@@ -19,8 +19,6 @@ target/
 *.iws
 *.iml
 *.ipr
-server/.idea
-server/.idea/**
 server/topzera/target/**
 server/topzera-ms/target/**
 

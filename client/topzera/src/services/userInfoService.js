@@ -34,7 +34,7 @@ const getProductsAndLikes = (email, cep) => {
  */
 const addLikedInformationIfUserLikedThisProduct = (product, likes) => {
     likes.forEach(like => {
-        if (like.productID === product.id)
+        if (like.productId === product.id)
             product = {...product, likedByUser: true } 
     })
 

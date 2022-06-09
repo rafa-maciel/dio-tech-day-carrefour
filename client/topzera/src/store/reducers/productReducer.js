@@ -14,7 +14,7 @@ const productReducer = createReducer(initialState, (builder) => {
         .addCase(incrementLikeToProduct, (state, action) => {
             let list = state.productList.map((product) => {
                 if (product.id === action.payload) {
-                    return {...product, totalLikes: ++product.totalLikes}
+                    return {...product, totalLikes: ++product.totalLikes, likedByUser: true }
                 }
                 return product
             })
